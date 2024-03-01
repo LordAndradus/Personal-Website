@@ -80,10 +80,9 @@
             
             toggleGamesMenu.onclick = function() {
                 gamesSubMenu.classList.toggle('open');
-                const isOpen = dropdownMenu.classList.contains('open');
+                const isOpen = gamesSubMenu.classList.contains('open');
                 
-                console.log(isOpen);
-                console.log(gamesSubMenu.classList.value);
+                console.log(isOpen ? "Games menu is open" : "Games menu is closed");
             }
         </script>
     </body>
