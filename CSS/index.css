@@ -10,7 +10,7 @@ body
 {
     height: 100vh;
     background-color: #000;
-    background-image: url('/Images/Background.png');
+    background-image: url('../Images/Background.png');
     background-size: cover;
     background-position: center;
 }
@@ -113,16 +113,33 @@ section#Summary {
 }
 
 /* Sub menu for navbar games */
-.navbar .links li button {
-    color:blue;
-    text-decoration: none;
-    border: none;
+.games {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border: 1px solid rgba(150, 150, 150);
+    left: 50%;
+    transform: translateX(-17%);
+    transform: translateY(10%);
+    transition: height .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.navbar .links li .games {
-    position: absolute;
-    justify-content: center;
+.has-games {
+    color:azure;
 }
+
+.has-games:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.games.open {
+    display: block;
+}
+
+/* Sub menu but when it's in the drop-down menu */
+
 
 /* When the window shrinks, open a drop-down */
 .dropdown-menu 
@@ -137,7 +154,7 @@ section#Summary {
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
-    transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown-menu.open 
