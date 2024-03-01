@@ -9,3 +9,11 @@ li {
     color: #edf0f1;
     text-decoration: none;
 }
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: aqua;
+    transition: background-color 0.3 ease;
+}
