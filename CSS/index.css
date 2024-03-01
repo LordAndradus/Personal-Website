@@ -11,6 +11,7 @@ body
     height: 100vh;
     background-color: #000;
     background-image: url('../Images/Background.gif');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -32,13 +33,15 @@ a:hover
     color: blueviolet;
 }
 
-header {
+header 
+{
     position: relative;
     padding: 0 2rem;
 }
 
 /* Main body content */
-section#Summary {
+section#Summary 
+{
     height: calc(100vh - 60px);
     display: flex;
     flex-direction: column;
@@ -46,6 +49,12 @@ section#Summary {
     justify-content: center;
     text-align: center;
     color: #FFF;
+}
+
+section#Summary img
+{
+    width: 200px;
+    height: 200px;
 }
 
 /* Navigation bar elements */
