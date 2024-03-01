@@ -1,29 +1,33 @@
 function submitForm()
 {
-    const fName = document.getElementById("First-Name").value;
-    const lName = document.getElementById("Last-Name").value;
-    const email = document.getElementById("Email").value;
-    const phone = document.getElementById("Phone").value;
-    const message = document.getElementById("Message").value;
-
-    console.log("Collected data");
-    console.log("First name: " + fName);
-    console.log("Last name: " + lName);
-    console.log("Email: " + email);
-    console.log("Phone: " + phone);
-    console.log("Message: " + message);
-
-    alert("Message sent successfully");
-    
-    Email.send({
-        SecureToken : "",
-        To : "LordAndradus@gmail.com",
-        From : email,
-        Subject : "",
-        Body : message
-    }).then(
-        message => alert("Email sent")
-    );
-    
-    console.log("Form submitted!");
+    alert("Message sent!");
 }
+
+const contactForm = document.querySelector(".contact.form");
+const firstName = document.querySelector('.first-name-input');
+const lastName = document.querySelector('.last-name-input');
+const phoneInput = document.querySelector('.phone-input');
+const emailInput = document.querySelector('.email-input').value.trim();
+
+console.log("Garnered contact form: " + contactForm);
+console.log(phoneInput);
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    alert("Form submitted. Thank you!");
+})
+
+//Auto format to (###) ###-####
+phoneInput.addEventListener('input', function() {
+    let value = phoneInput.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length > 3) 
+    {
+        value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+    }
+    if (value.length > 9) 
+    {
+        value = `${value.slice(0, 9)}-${value.slice(9)}`;
+    }
+    phoneInput.value = value;
+});
