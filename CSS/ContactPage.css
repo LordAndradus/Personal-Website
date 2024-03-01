@@ -146,7 +146,13 @@ body
 
 .info
 {
+    color: azure;
     background-color: #0c445f;
+}
+
+.info a
+{
+    color: red;
 }
 
 .info h3
@@ -185,4 +191,50 @@ body
 {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 991px)
+{
+    body
+    {
+        background: #0c445f;
+    }
+
+    .contact-me
+    {
+        padding: 20px;
+    }
+
+    .information
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "form"
+        "info"
+        "map";
+    }
+
+    .map
+    {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .formBox .row50
+    {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .inputBox
+    {
+        width: 100%;
+    }
+
+    .contact
+    {
+        padding: 30px;
+    }
+
 }
