@@ -75,15 +75,18 @@
             }
 
             //For the games submenu
-            const toggleGamesMenu = document.querySelector('.has-games');
-            const gamesSubMenu = document.querySelector('.games');
+            const toggleGamesMenu = document.querySelectorAll('.has-games');
+            const gamesSubMenu = document.querySelectorAll('.games');
             
-            toggleGamesMenu.onclick = function() {
-                gamesSubMenu.classList.toggle('open');
-                const isOpen = gamesSubMenu.classList.contains('open');
-                
-                console.log(isOpen ? "Games menu is open" : "Games menu is closed");
-            }
+            toggleGamesMenu.forEach(function(e) {
+                e.onclick = function() {
+                    index = Array.from(toggleGamesMenu).indexOf(e);
+                    gamesSubMenu[index].classList.toggle('open');
+                    const isOpen = gamesSubMenu[index].classList.contains('open');
+
+                    console.log(isOpen ? "Games menu is open" : "Games menu is closed");
+                }
+            })
         </script>
     </body>
 </html>

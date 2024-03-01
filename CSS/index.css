@@ -146,9 +146,13 @@ section#Summary {
     gap: 10px;
 }
 
-.dropdown-menu .games.open {
-    display: block;
-    color:chartreuse;
+.dropdown-menu .has-games {
+    color: chartreuse;
+}
+
+.dropdown-menu .has-games .games.open {
+    transform: translateX(100%);
+    height: auto;
 }
 
 /* Sub menu but when it's in the drop-down menu */
