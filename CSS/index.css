@@ -1,0 +1,178 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body 
+{
+    height: 100vh;
+    background-color: #000;
+    background-image: url('/Images/Background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+li 
+{
+    list-style: none;
+}
+
+a 
+{
+    text-decoration: none;
+    color: azure;
+    font-size: 1rem;
+}
+
+a:hover 
+{
+    color: blueviolet;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+/* Main body content */
+section#Summary {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+}
+
+/* Navigation bar elements */
+.navbar 
+{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.navbar .logo img 
+{
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.navbar .logo a 
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links 
+{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-bars 
+{
+    color:azure;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-button 
+{
+    background-color: blue;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action-button:hover 
+{
+    scale: 1.1;
+    color:azure;
+}
+
+.action-button:active 
+{
+    scale: 0.9;
+    color:azure;
+}
+
+/* When the window shrinks, open a drop-down */
+.dropdown-menu 
+{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0; /* It exists, but won't open until we click the bars */
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open 
+{
+    height: 270px;
+}
+
+.dropdown-menu li 
+{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action-button 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-menu .action-button:hover 
+{
+    scale: 1.05;
+}
+
+/* When the window shifts */
+@media(max-width: 992px) 
+{
+    .navbar .links,
+    .navbar .action-button { 
+        display: none; 
+    }
+
+    .navbar .toggle-bars {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) 
+{
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
