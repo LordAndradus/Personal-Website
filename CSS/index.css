@@ -112,6 +112,18 @@ section#Summary {
     color:azure;
 }
 
+/* Sub menu for navbar games */
+.navbar .links li button {
+    color:blue;
+    text-decoration: none;
+    border: none;
+}
+
+.navbar .links li .games {
+    position: absolute;
+    justify-content: center;
+}
+
 /* When the window shrinks, open a drop-down */
 .dropdown-menu 
 {
