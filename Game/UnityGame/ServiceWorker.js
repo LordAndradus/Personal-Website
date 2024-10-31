@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-Game Jam-1.0";
 const contentToCache = [
-    "Build/WebsiteGame.loader.js",
-    "Build/WebsiteGame.framework.js.unityweb",
-    "Build/WebsiteGame.data.unityweb",
-    "Build/WebsiteGame.wasm.unityweb",
+    "Build/WebsiteGame_2.loader.js",
+    "Build/WebsiteGame_2.framework.js.unityweb",
+    "Build/WebsiteGame_2.data.unityweb",
+    "Build/WebsiteGame_2.wasm.unityweb",
     "TemplateData/style.css"
 
 ];
