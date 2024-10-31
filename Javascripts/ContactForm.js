@@ -7,13 +7,19 @@ const contactForm = document.querySelector(".contact.form");
 const firstName = document.querySelector('.first-name-input');
 const lastName = document.querySelector('.last-name-input');
 const phoneInput = document.querySelector('.phone-input');
-const emailInput = document.querySelector('.email-input').value.trim();
+const emailInput = document.querySelector('.email-input');
 
 console.log("Garnered contact form: " + contactForm);
 console.log(phoneInput);
 
 contactForm.addEventListener('submit', function(event) {
     event.preventDefault();
+
+    if(phoneInput.value.length != phoneInput.getAttribute('minlength'))
+    {
+        alert("Phone number must be 10 digits in length!");
+        return;
+    }
 
     alert("Form submitted. Thank you!");
 })
